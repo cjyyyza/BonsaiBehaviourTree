@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RootNamespace>Bonsai.Editor</RootNamespace>
+    <AssemblyName>BonsaiEditorAssembly</AssemblyName>
+    <Nullable>disable</Nullable>
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
+    <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Unity3D.UnityEngine" Version="2020.3.21" />
+    <PackageReference Include="UnityEditor" Version="2019.3.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Bonsai.Core.csproj" />
+    <ProjectReference Include="../Standard/Bonsai.Standard.csproj" />
+  </ItemGroup>
+</Project>

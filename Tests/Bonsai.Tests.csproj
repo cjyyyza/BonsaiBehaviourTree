@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>BonsaiTestsAssembly</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <Nullable>disable</Nullable>
+    <DefineConstants>UNITY_INCLUDE_TESTS</DefineConstants>
+    <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Unity3D.UnityEngine" Version="2020.3.21" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Bonsai.Core.csproj" />
+    <ProjectReference Include="../Standard/Bonsai.Standard.csproj" />
+  </ItemGroup>
+</Project>
