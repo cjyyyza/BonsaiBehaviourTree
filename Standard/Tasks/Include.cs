@@ -1,4 +1,4 @@
-﻿
+
 using System.Text;
 using Bonsai.Core;
 using UnityEngine;
@@ -25,12 +25,15 @@ namespace Bonsai.Standard
 
     public override void OnEnter()
     {
-      RunningSubTree.BeginTraversal();
+      if (RunningSubTree)
+      {
+        RunningSubTree.BeginTraversal();
+      }
     }
 
     public override void OnExit()
     {
-      if (RunningSubTree.IsRunning())
+      if (RunningSubTree && RunningSubTree.IsRunning())
       {
         RunningSubTree.Interrupt();
       }
